@@ -7,7 +7,11 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/account', function(req, res, next) {
-  res.send('Account');
+  res.render('list');
+});
+
+router.get('/account/create', function(req, res, next) {
+  res.render('create');
 });
 
 module.exports = router;
