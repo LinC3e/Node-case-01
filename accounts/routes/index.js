@@ -28,7 +28,9 @@ router.post('/account', (req,res) => {
 
   console.log(req.body)
   db.get('accounts').push({ id: id, ...req.body }).write();
-  res.send('Account send')
+  res.render('success', {
+    url: '/account'
+  })
 })
 
 module.exports = router;
