@@ -14,4 +14,9 @@ router.get('/account/create', function(req, res, next) {
   res.render('create');
 });
 
+router.post('/account', (req,res) => {
+  console.log(req.body)
+  res.send('Account send')
+})
+
 module.exports = router;
