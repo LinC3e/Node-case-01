@@ -15,7 +15,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/account', function(req, res, next) {
-  res.render('list');
+  let accounts = db.get('accounts').value();
+  console.log(accounts)
+  res.render('list', {accounts : accounts } );
 });
 
 router.get('/account/create', function(req, res, next) {
